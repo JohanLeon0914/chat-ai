@@ -18,7 +18,7 @@ export function Chat() {
     };
   
     return (
-      <div className="flex flex-col max-w-xl px-8 mx-auto">
+      <div className="flex flex-col max-w-xl px-8 mx-auto mb-8">
         <h1 className="text-center mb-4">👋 ¡Hola! Chatea con mi chatbot para obtener información sobre mí.</h1>
         <div className="max-h-[500px] overflow-y-auto">
           {messages.map((message) => {
