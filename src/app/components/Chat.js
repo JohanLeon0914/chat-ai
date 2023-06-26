@@ -18,9 +18,9 @@ export function Chat() {
     };
   
     return (
-      <div className="flex flex-col max-w-xl px-8 mx-auto mb-8">
+      <div className="flex flex-col max-w-xl px-8 mx-auto">
         <h1 className="text-center mb-4">👋 ¡Hola! Chatea con mi chatbot para obtener información sobre mí.</h1>
-        <div className="max-h-[500px] overflow-y-auto">
+        <div className="max-h-[500px] overflow-y-auto mb-4">
           {messages.map((message) => {
             const isSystem = message.role !== 'user';
             const containerClass = isSystem ? 'bg-blue-500' : 'bg-green-500';
@@ -43,10 +43,10 @@ export function Chat() {
           <div ref={messagesEndRef} />
         </div>
   
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mb-4">
           <div className="fixed left-0 right-0 flex items-center justify-center bottom-4">
             <input
-              className="w-[90%] max-w-xl px-4 py-2 mb-8 text-sm border border-gray-400 rounded-full shadow-2xl"
+              className="w-[90%] max-w-xl px-4 py-2 text-sm border border-gray-400 rounded-full shadow-2xl"
               placeholder="Chatea con Johan León (bot)"
               type="text"
               value={input}
